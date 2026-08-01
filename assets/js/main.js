@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function renderCarCard(car){
   return `
-    <div class="car-card reveal">
+    <div class="car-card">
       <div class="car-photo">
         <span class="car-badge-year">${car.year}</span>
         <img src="assets/${car.id}.png" alt="${car.brand} ${car.model}">

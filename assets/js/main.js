@@ -80,7 +80,7 @@ function renderCarCard(car) {
     <div class="car-card">
       <div class="car-photo">
         <span class="car-badge-year">${car.year}</span>
-        <img src="assets/img/${car.id}.png" alt="${car.brand} ${car.model}">
+        <img src="assets/js/cars-data.js/${car.id}.png" alt="${car.brand} ${car.model}">
       </div>
       <div class="car-body">
         <span class="car-brand">${car.brand}</span>

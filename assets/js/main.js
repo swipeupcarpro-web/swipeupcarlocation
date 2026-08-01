@@ -80,8 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="car-card reveal">
         <div class="car-photo">
           <span class="car-badge-year">${car.year}</span>
-          ${carSilhouetteSVG()}
-        </div>
+          <img src="assets/${car.id}.png" alt="${car.brand} ${car.model}">
         <div class="car-body">
           <span class="car-brand">${car.brand}</span>
           <h3 class="car-name">${car.model}</h3>

@@ -1,21 +1,183 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Catalogue LLD 2026 — Audi, BMW, Mercedes, Volkswagen | SWIPEUPCAR</title>
-<meta name="description" content="Découvrez notre catalogue de véhicules 2026 disponibles en Location Longue Durée : Audi Q3, A5, Q2, A1, BMW X2, Série 1, Mercedes Classe A, Volkswagen T-Roc, T-Cross, Golf 8, Polo. Assurance comprise, sans caution.">
-<meta name="keywords" content="Location Audi, Location BMW, Location Mercedes, Location Volkswagen, LLD particulier, Location Longue Durée, voiture sans caution, SWIPEUPCAR">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://www.swipeupcar.fr/catalogue.html">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalogue LLD 2026 — Audi, BMW, Mercedes, Volkswagen | SWIPEUPCAR</title>
+  <meta name="description" content="Découvrez notre catalogue de véhicules 2026 disponibles en Location Longue Durée : Audi Q3, A5, Q2, A1, BMW X2, Série 1, Mercedes Classe A, Volkswagen T-Roc, T-Cross, Golf 8, Polo. Assurance comprise, sans caution.">
+  <meta name="keywords" content="Location Audi, Location BMW, Location Mercedes, Location Volkswagen, LLD particulier, Location Longue Durée, voiture sans caution, SWIPEUPCAR">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="[swipeupcar.fr](https://www.swipeupcar.fr/catalogue.html)">
+  <link rel="preconnect" href="[fonts.googleapis.com](https://fonts.googleapis.com)">
+  <link rel="preconnect" href="[fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+  <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500&display=swap)" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    .catalogue-grid-custom {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 28px;
+      margin-top: 50px;
+    }
+
+    .car-card {
+      background: linear-gradient(180deg, #f5efe4 0%, #e6d3b6 100%);
+      border: 1px solid rgba(201, 162, 39, 0.35);
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.14);
+      transition: transform .25s ease, box-shadow .25s ease;
+      position: relative;
+    }
+
+    .car-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 55px rgba(0, 0, 0, 0.18);
+    }
+
+    .car-card-top {
+      background:
+        radial-gradient(circle at top left, rgba(201,162,39,.18), transparent 35%),
+        linear-gradient(145deg, #223138 0%, #17242b 100%);
+      padding: 18px 18px 8px;
+      min-height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .car-card-top img {
+      width: 100%;
+      max-width: 280px;
+      max-height: 200px;
+      object-fit: contain;
+      display: block;
+      filter: drop-shadow(0 16px 22px rgba(0,0,0,.35));
+    }
+
+    .car-card-body {
+      padding: 22px 20px 20px;
+    }
+
+    .car-brand {
+      font-size: .82rem;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      color: #8a6d1f;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .car-title {
+      font-size: 1.45rem;
+      line-height: 1.15;
+      margin: 0 0 14px;
+      color: #1b2730;
+      font-weight: 800;
+    }
+
+    .car-price {
+      display: inline-block;
+      background: #1b2730;
+      color: #fff;
+      font-weight: 800;
+      font-size: 1.05rem;
+      padding: 10px 14px;
+      border-radius: 12px;
+      margin-bottom: 18px;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.06);
+    }
+
+    .car-specs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .car-spec {
+      background: rgba(255,255,255,.55);
+      border: 1px solid rgba(27,39,48,.08);
+      border-radius: 12px;
+      padding: 10px 12px;
+    }
+
+    .car-spec span {
+      display: block;
+    }
+
+    .car-spec-label {
+      font-size: .72rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: #7a6c55;
+      margin-bottom: 4px;
+      font-weight: 700;
+    }
+
+    .car-spec-value {
+      font-size: .96rem;
+      font-weight: 700;
+      color: #1f2c34;
+    }
+
+    .car-infos {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .car-infos li {
+      font-size: .95rem;
+      color: #3c3328;
+      padding-left: 18px;
+      position: relative;
+    }
+
+    .car-infos li::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #c9a227;
+      position: absolute;
+      left: 0;
+      top: 8px;
+    }
+
+    .car-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(201,162,39,.16);
+      color: #7d6318;
+      border: 1px solid rgba(201,162,39,.35);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: .82rem;
+      font-weight: 700;
+    }
+
+    @media (max-width: 640px) {
+      .car-card-top {
+        min-height: 210px;
+      }
+
+      .car-title {
+        font-size: 1.25rem;
+      }
+
+      .car-specs {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<!-- ===================== HEADER ===================== -->
 <header class="site-header scrolled">
   <div class="container">
     <div class="nav-side">
@@ -43,63 +205,246 @@
   <a href="contact.html">Contact</a>
 </nav>
 
-<!-- ===================== CATALOGUE COMPLET ===================== -->
 <section class="catalogue on-page">
   <div class="container">
     <div class="catalogue-intro reveal">
       <p class="eyebrow">Nouveauté chez SWIPEUPCAR</p>
       <h1 class="section-title">Catalogue LLD — Modèles 2026</h1>
-      <p class="section-lead" style="margin-left:auto;margin-right:auto;">Location Longue Durée 3, 6 ou 12 mois, réservée aux particuliers. Assurance comprise, kilométrage illimité, sans caution.</p>
-    </div>
-
-    <div class="catalogue-grid" id="catalogue-grid"></div>
-
-    <div class="colors-box reveal" style="margin-top:70px;background:var(--c-beige-light);border-color:rgba(201,162,39,.4);">
-      <h4 style="color:#8a6d1f;">Bon à savoir</h4>
-      <p style="font-family:var(--font-serif);font-size:1.05rem;color:#4b4030;line-height:1.7;">
-        Sur ce type de location, le choix des options n'est pas envisageable — mais la grande majorité de nos véhicules sont déjà très bien équipés.
-        Couleurs disponibles selon arrivage : Noir, Blanc ou Gris. Conditions : pièce d'identité, carte bleue physique, permis de conduire de plus d'un an, commission obligatoire.
+      <p class="section-lead" style="margin-left:auto;margin-right:auto;">
+        Location Longue Durée 3, 6 ou 12 mois, réservée aux particuliers. Assurance comprise, kilométrage illimité, sans caution.
       </p>
     </div>
-  </div>
-</section>
 
-<!-- ===================== CTA ===================== -->
-<section class="cta-band">
-  <div class="container reveal">
-    <p class="eyebrow">Un modèle vous intéresse ?</p>
-    <h2 class="section-title on-dark">Parlons de votre projet</h2>
-    <a href="contact.html" class="btn btn-gold btn-lg">Nous contacter</a>
-  </div>
-</section>
+    <div class="catalogue-grid-custom">
 
-<!-- ===================== FOOTER ===================== -->
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <div class="logo-badge" style="width:56px;height:56px;">
-          <span class="logo-text" style="font-size:.42rem;">SWIPE<br>UP<br>CAR</span>
+      <article class="car-card reveal">
+        <div class="car-card-top">
+          <img src="assets/img/cars/audi-q3.png" alt="Audi Q3 2026 noir">
         </div>
-        <div>
-          <span class="brand-name">SWIPEUPCAR</span>
-          <span class="brand-tag">Location Longue Durée — Île-de-France</span>
+        <div class="car-card-body">
+          <p class="car-brand">Audi</p>
+          <h2 class="car-title">Q3</h2>
+          <div class="car-price">1159 € / mois</div>
+          <div class="car-specs">
+            <div class="car-spec"><span class="car-spec-label">Année</span><span class="car-spec-value">2026</span></div>
+            <div class="car-spec"><span class="car-spec-label">Durée</span><span class="car-spec-value">3 / 6 / 12 mois</span></div>
+          </div>
+          <ul class="car-infos">
+            <li>LLD pour particuliers</li>
+            <li>Assurance comprise</li>
+            <li>Kilométrage illimité</li>
+            <li>Sans caution</li>
+          </ul>
+          <span class="car-badge">Disponible selon arrivage</span>
         </div>
-      </div>
-      <nav class="footer-nav">
-        <a href="index.html">Accueil</a>
-        <a href="catalogue.html">Catalogue LLD</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-    <div class="footer-bottom">
-      <span>&copy; 2026 SWIPEUPCAR. Tous droits réservés.</span>
-      <span>07 59 00 72 88 — Snapchat : SWIPEUPCAR</span>
-    </div>
-  </div>
-</footer>
+      </article>
 
-<script src="assets/js/cars-data.js"></script>
-<script src="assets/js/main.js"></script>
-</body>
-</html>
+      <article class="car-card reveal">
+        <div class="car-card-top">
+          <img src="assets/img/cars/audi-a5.png" alt="Audi A5 2026 noir">
+        </div>
+        <div class="car-card-body">
+          <p class="car-brand">Audi</p>
+          <h2 class="car-title">A5</h2>
+          <div class="car-price">1169 € / mois</div>
+          <div class="car-specs">
+            <div class="car-spec"><span class="car-spec-label">Année</span><span class="car-spec-value">2026</span></div>
+            <div class="car-spec"><span class="car-spec-label">Durée</span><span class="car-spec-value">3 / 6 / 12 mois</span></div>
+          </div>
+          <ul class="car-infos">
+            <li>LLD pour particuliers</li>
+            <li>Assurance comprise</li>
+            <li>Kilométrage illimité</li>
+            <li>Sans caution</li>
+          </ul>
+          <span class="car-badge">Disponible selon arrivage</span>
+        </div>
+      </article>
+
+      <article class="car-card reveal">
+        <div class="car-card-top">
+          <img src="assets/img/cars/audi-q2.png" alt="Audi Q2 2026 noir">
+        </div>
+        <div class="car-card-body">
+          <p class="car-brand">Audi</p>
+          <h2 class="car-title">Q2</h2>
+          <div class="car-price">839 € / mois</div>
+          <div class="car-specs">
+            <div class="car-spec"><span class="car-spec-label">Année</span><span class="car-spec-value">2026</span></div>
+            <div class="car-spec"><span class="car-spec-label">Durée</span><span class="car-spec-value">3 / 6 / 12 mois</span></div>
+          </div>
+          <ul class="car-infos">
+            <li>LLD pour particuliers</li>
+            <li>Assurance comprise</li>
+            <li>Kilométrage illimité</li>
+            <li>Sans caution</li>
+          </ul>
+          <span class="car-badge">Disponible selon arrivage</span>
+        </div>
+      </article>
+
+      <article class="car-card reveal">
+        <div class="car-card-top">
+          <img src="assets/img/cars/audi-a1.png" alt="Audi A1 2026 noir">
+        </div>
+        <div class="car-card-body">
+          <p class="car-brand">Audi</p>
+          <h2 class="car-title">A1</h2>
+          <div class="car-price">699 € / mois</div>
+          <div class="car-specs">
+            <div class="car-spec"><span class="car-spec-label">Année</span><span class="car-spec-value">2026</span></div>
+            <div class="car-spec"><span class="car-spec-label">Durée</span><span class="car-spec-value">3 / 6 / 12 mois</span></div>
+          </div>
+          <ul class="car-infos">
+            <li>LLD pour particuliers</li>
+            <li>Assurance comprise</li>
+            <li>Kilométrage illimité</li>
+            <li>Sans caution</li>
+          </ul>
+          <span class="car-badge">Disponible selon arrivage</span>
+        </div>
+      </article>
+
+      <article class="car-card reveal">
+        <div class="car-card-top">
+          <img src="assets/img/cars/volkswagen-t-roc.png" alt="Volkswagen T-Roc 2026 noir">
+        </div>
+        <div class="car-card-body">
+          <p class="car-brand">Volkswagen</p>
+          <h2 class="car-title">T-Roc</h2>
+          <div class="car-price">799 € / mois</div>
+          <div class="car-specs">
+            <div class="car-spec"><span class="car-spec-label">Année</span><span class="car-spec-value">2026</span></div>
+            <div class="car-spec"><span class="car-spec-label">Durée</span><span class="car-spec-value">3 / 6 / 12 mois</span></div>
+          </div>
+          <ul class="car-infos">
+            <li>LLD pour particuliers</li>
+            <li>Assurance comprise</li>
+            <li>Kilométrage illimité</li>
+            <li>Sans caution</li>
+          </ul>
+          <span class="car-badge">Disponible selon arrivage</span>
+        </div>
+      </article>
+
+      <article class="car-card reveal">
+        <div class="car-card-top">
+          <img src="assets/img/cars/volkswagen-t-cross.png" alt="Volkswagen T-Cross 2026 noir">
+        </div>
+        <div class="car-card-body">
+          <p class="car-brand">Volkswagen</p>
+          <h2 class="car-title">T-Cross</h2>
+          <div class="car-price">659 € / mois</div>
+          <div class="car-specs">
+            <div class="car-spec"><span class="car-spec-label">Année</span><span class="car-spec-value">2026</span></div>
+            <div class="car-spec"><span class="car-spec-label">Durée</span><span class="car-spec-value">3 / 6 / 12 mois</span></div>
+          </div>
+          <ul class="car-infos">
+            <li>LLD pour particuliers</li>
+            <li>Assurance comprise</li>
+            <li>Kilométrage illimité</li>
+            <li>Sans caution</li>
+          </ul>
+          <span class="car-badge">Disponible selon arrivage</span>
+        </div>
+      </article>
+
+      <article class="car-card reveal">
+        <div class="car-card-top">
+          <img src="assets/img/cars/volkswagen-golf-8.png" alt="Volkswagen Golf 8 2026 noir">
+        </div>
+        <div class="car-card-body">
+          <p class="car-brand">Volkswagen</p>
+          <h2 class="car-title">Golf 8</h2>
+          <div class="car-price">749 € / mois</div>
+          <div class="car-specs">
+            <div class="car-spec"><span class="car-spec-label">Année</span><span class="car-spec-value">2026</span></div>
+            <div class="car-spec"><span class="car-spec-label">Durée</span><span class="car-spec-value">3 / 6 / 12 mois</span></div>
+          </div>
+          <ul class="car-infos">
+            <li>LLD pour particuliers</li>
+            <li>Assurance comprise</li>
+            <li>Kilométrage illimité</li>
+            <li>Sans caution</li>
+          </ul>
+          <span class="car-badge">Disponible selon arrivage</span>
+        </div>
+      </article>
+
+      <article class="car-card reveal">
+        <div class="car-card-top">
+          <img src="assets/img/cars/volkswagen-polo.png" alt="Volkswagen Polo 2026 noir">
+        </div>
+        <div class="car-card-body">
+          <p class="car-brand">Volkswagen</p>
+          <h2 class="car-title">Polo</h2>
+          <div class="car-price">639 € / mois</div>
+          <div class="car-specs">
+            <div class="car-spec"><span class="car-spec-label">Année</span><span class="car-spec-value">2026</span></div>
+            <div class="car-spec"><span class="car-spec-label">Durée</span><span class="car-spec-value">3 / 6 / 12 mois</span></div>
+          </div>
+          <ul class="car-infos">
+            <li>LLD pour particuliers</li>
+            <li>Assurance comprise</li>
+            <li>Kilométrage illimité</li>
+            <li>Sans caution</li>
+          </ul>
+          <span class="car-badge">Disponible selon arrivage</span>
+        </div>
+      </article>
+
+      <article class="car-card reveal">
+        <div class="car-card-top">
+          <img src="assets/img/cars/bmw-x2.png" alt="BMW X2 2026 noir">
+        </div>
+        <div class="car-card-body">
+          <p class="car-brand">BMW</p>
+          <h2 class="car-title">X2</h2>
+          <div class="car-price">1169 € / mois</div>
+          <div class="car-specs">
+            <div class="car-spec"><span class="car-spec-label">Année</span><span class="car-spec-value">2026</span></div>
+            <div class="car-spec"><span class="car-spec-label">Durée</span><span class="car-spec-value">3 / 6 / 12 mois</span></div>
+          </div>
+          <ul class="car-infos">
+            <li>LLD pour particuliers</li>
+            <li>Assurance comprise</li>
+            <li>Kilométrage illimité</li>
+            <li>Sans caution</li>
+          </ul>
+          <span class="car-badge">Disponible selon arrivage</span>
+        </div>
+      </article>
+
+      <article class="car-card reveal">
+        <div class="car-card-top">
+          <img src="assets/img/cars/bmw-serie-1.png" alt="BMW Série 1 2026 noir">
+        </div>
+        <div class="car-card-body">
+          <p class="car-brand">BMW</p>
+          <h2 class="car-title">Série 1</h2>
+          <div class="car-price">829 € / mois</div>
+          <div class="car-specs">
+            <div class="car-spec"><span class="car-spec-label">Année</span><span class="car-spec-value">2026</span></div>
+            <div class="car-spec"><span class="car-spec-label">Durée</span><span class="car-spec-value">3 / 6 / 12 mois</span></div>
+          </div>
+          <ul class="car-infos">
+            <li>LLD pour particuliers</li>
+            <li>Assurance comprise</li>
+            <li>Kilométrage illimité</li>
+            <li>Sans caution</li>
+          </ul>
+          <span class="car-badge">Disponible selon arrivage</span>
+        </div>
+      </article>
+
+      <article class="car-card reveal">
+        <div class="car-card-top">
+          <img src="assets/img/cars/mercedes-classe-a.png" alt="Mercedes Classe A 2026 noir">
+        </div>
+        <div class="car-card-body">
+          <p class="car-brand">Mercedes</p>
+          <h2 class="car-title">Classe A</h2>
+          <div class="car-price">839 € / mois</div>
+          <div class="car-specs">
+            <div class="car-spec"><span class="car-spec-label">Année</span><span class="car-spec-value">2026</span></div>
+            <div class="car-spec"><span class="car-spec-label">Durée</

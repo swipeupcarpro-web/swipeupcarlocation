@@ -64,6 +64,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ---------- Render car catalogue (full page) ---------- */
   const grid = document.getElementById("catalogue-grid");
+   console.log("GRID :", grid);
+console.log("CARS :", typeof CARS, CARS);
   if (grid && typeof CARS !== "undefined") {
     grid.innerHTML = CARS.map(renderCarCard).join("");
   }

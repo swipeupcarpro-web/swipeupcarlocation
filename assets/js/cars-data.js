@@ -8,7 +8,7 @@ const CARS = [
   { id:"audi-a5",        brand:"Audi",       model:"A5",         price:1169, color:"Noir", year:2026 },
   { id:"audi-q2",        brand:"Audi",       model:"Q2",         price:839,  color:"Noir", year:2026 },
   { id:"audi-a1",        brand:"Audi",       model:"A1",         price:699,  color:"Noir", year:2026 },
-  { id:"vw-t-roc",       brand:"Volkswagen", model:"T-Roc",      price:799,  color:"Noir", year:2026 },
+  { id:"vw-t-roc",       brand:"Volkswagen", model:"T-Roc",      price:799,  color:"Blanc", year:2026 },
   { id:"vw-t-cross",     brand:"Volkswagen", model:"T-Cross",    price:659,  color:"Noir", year:2026 },
   { id:"vw-golf-8",      brand:"Volkswagen", model:"Golf 8",     price:749,  color:"Noir", year:2026 },
   { id:"vw-polo",        brand:"Volkswagen", model:"Polo",       price:639,  color:"Noir", year:2026 },
